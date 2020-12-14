@@ -17,5 +17,19 @@ namespace RockPaperScissors.Models
       int randomPlay = rand.Next(3); 
       return plays[randomPlay];
     }
+
+    public static string GameResult(string play)
+    {
+      string randomPlay = RandomPlay();
+      if(play == randomPlay)
+      {
+        return "ties";
+      }
+      if(play == "rock" && randomPlay == "scissors" || play == "scissors" && randomPlay == "paper" || play == "paper" && randomPlay == "rock")
+      {
+        return "wins";
+      }
+      return "loses";
+    }
   }
 }
