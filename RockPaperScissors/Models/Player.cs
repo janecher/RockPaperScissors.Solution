@@ -1,10 +1,12 @@
 using System;
+using System.Collections.Generic;
 
 namespace RockPaperScissors.Models
 {
   public class Player
   {
     public string Name {get; set;}
+    private static Dictionary<string, int> _playersList = new Dictionary<string, int>();
     public Player(string name)
     {
       Name = name;
@@ -18,7 +20,7 @@ namespace RockPaperScissors.Models
       return plays[randomPlay];
     }
 
-    public static string GameResult(string play)
+    public static string GameResult(string play, string name)
     {
       string randomPlay = RandomPlay();
       if(play == randomPlay)
@@ -27,9 +29,22 @@ namespace RockPaperScissors.Models
       }
       if(play == "rock" && randomPlay == "scissors" || play == "scissors" && randomPlay == "paper" || play == "paper" && randomPlay == "rock")
       {
+        if(_playersList.ContainsKey(name))
+        {
+          _playersList[name]++;
+        }
+        else
+        {
+          _playersList.Add(name, 1);
+        }
         return "wins";
       }
       return "loses";
+    }
+
+    public static Dictionary<string, int> GetPlayersList()
+    {
+      return _playersList;
     }
   }
 }

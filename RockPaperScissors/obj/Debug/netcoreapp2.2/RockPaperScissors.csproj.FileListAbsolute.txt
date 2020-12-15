@@ -1,0 +1,16 @@
+/Users/evgeniya/Desktop/RockPaperScissors.Solution/RockPaperScissors/bin/Debug/netcoreapp2.2/appsettings.Development.json
+/Users/evgeniya/Desktop/RockPaperScissors.Solution/RockPaperScissors/bin/Debug/netcoreapp2.2/appsettings.json
+/Users/evgeniya/Desktop/RockPaperScissors.Solution/RockPaperScissors/bin/Debug/netcoreapp2.2/Properties/launchSettings.json
+/Users/evgeniya/Desktop/RockPaperScissors.Solution/RockPaperScissors/bin/Debug/netcoreapp2.2/RockPaperScissors.deps.json
+/Users/evgeniya/Desktop/RockPaperScissors.Solution/RockPaperScissors/bin/Debug/netcoreapp2.2/RockPaperScissors.runtimeconfig.json
+/Users/evgeniya/Desktop/RockPaperScissors.Solution/RockPaperScissors/bin/Debug/netcoreapp2.2/RockPaperScissors.runtimeconfig.dev.json
+/Users/evgeniya/Desktop/RockPaperScissors.Solution/RockPaperScissors/bin/Debug/netcoreapp2.2/RockPaperScissors.dll
+/Users/evgeniya/Desktop/RockPaperScissors.Solution/RockPaperScissors/bin/Debug/netcoreapp2.2/RockPaperScissors.pdb
+/Users/evgeniya/Desktop/RockPaperScissors.Solution/RockPaperScissors/obj/Debug/netcoreapp2.2/RockPaperScissors.csprojAssemblyReference.cache
+/Users/evgeniya/Desktop/RockPaperScissors.Solution/RockPaperScissors/obj/Debug/netcoreapp2.2/RockPaperScissors.RazorAssemblyInfo.cache
+/Users/evgeniya/Desktop/RockPaperScissors.Solution/RockPaperScissors/obj/Debug/netcoreapp2.2/RockPaperScissors.RazorAssemblyInfo.cs
+/Users/evgeniya/Desktop/RockPaperScissors.Solution/RockPaperScissors/obj/Debug/netcoreapp2.2/RockPaperScissors.AssemblyInfoInputs.cache
+/Users/evgeniya/Desktop/RockPaperScissors.Solution/RockPaperScissors/obj/Debug/netcoreapp2.2/RockPaperScissors.AssemblyInfo.cs
+/Users/evgeniya/Desktop/RockPaperScissors.Solution/RockPaperScissors/obj/Debug/netcoreapp2.2/RockPaperScissors.RazorTargetAssemblyInfo.cache
+/Users/evgeniya/Desktop/RockPaperScissors.Solution/RockPaperScissors/obj/Debug/netcoreapp2.2/RockPaperScissors.dll
+/Users/evgeniya/Desktop/RockPaperScissors.Solution/RockPaperScissors/obj/Debug/netcoreapp2.2/RockPaperScissors.pdb

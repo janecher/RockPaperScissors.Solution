@@ -21,7 +21,7 @@ namespace RockPaperScissors.Controllers
         {
             try
             {
-                string gameResult = Player.GameResult(play);
+                string gameResult = Player.GameResult(play, name);
                 string report = $"Player {name} {gameResult} the round";
                 return StatusCode(httpOk, report);
             }
