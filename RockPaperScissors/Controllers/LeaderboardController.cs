@@ -20,7 +20,7 @@ namespace RockPaperScissors.Controllers
             try
             {
                 return StatusCode(HttpCodes.Ok,
-                                  JsonConvert.SerializeObject(Player.GetPlayersList().ToArray(), Formatting.Indented));
+                                  JsonConvert.SerializeObject(Player.GetPlayersList(), Formatting.Indented));
             }
             catch (ArgumentException ex)
             {

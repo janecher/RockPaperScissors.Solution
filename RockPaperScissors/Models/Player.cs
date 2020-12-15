@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace RockPaperScissors.Models
 {
@@ -14,10 +15,10 @@ namespace RockPaperScissors.Models
       int randomPlay = rand.Next(3); 
       return plays[randomPlay];
     }
-    
+
     public static string PlayGame(string play, string player_name)
     {
-      if(String.IsNullOrEmpty(player_name) || String.IsNullOrEmpty(play))
+      if(String.IsNullOrEmpty(play) || String.IsNullOrEmpty(player_name))
       {
         throw new ArgumentException("player_name and play parameters are required");
       }
@@ -47,9 +48,9 @@ namespace RockPaperScissors.Models
       return "loses";
     }
 
-    public static Dictionary<string, int> GetPlayersList()
+    public static List<PlayerInfo> GetPlayersList()
     {
-      return _playersList;
+      return _playersList.OrderByDescending(key => key.Value).Select(playerInfo => new PlayerInfo { PlayerName = playerInfo.Key, Score = playerInfo.Value}).ToList();
     }
   }
 }
