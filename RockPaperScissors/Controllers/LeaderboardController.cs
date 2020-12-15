@@ -13,25 +13,23 @@ namespace RockPaperScissors.Controllers
     [ApiController]
     public class LeaderboardController : ControllerBase
     {
-        const int httpOk = 200;
-        const int httpBadRequest = 400;
-        const int httpInternalError = 500;
-
         // GET api/leaderboard
         [HttpGet]
         public ActionResult<Object> Get()
         {
             try
             {
-                return StatusCode(httpOk, Json.SerializeArray(Player.GetPlayersList().ToArray(), Formatting.Indented));
+                return StatusCode(HttpCodes.Ok,
+                                  JsonConvert.SerializeObject(Player.GetPlayersList().ToArray(), Formatting.Indented));
             }
             catch (ArgumentException ex)
             {
-                return StatusCode(httpBadRequest, new ErrorMessage(ex.Message));
+                return StatusCode(HttpCodes.BadRequest,
+                                  new ErrorMessage(ex.Message));
             }
             catch (Exception)
             {
-                return StatusCode(httpInternalError,
+                return StatusCode(HttpCodes.InternalError,
                                   new ErrorMessage("Internal error occured. Please contact evgeniya.chernaya@gmail.com"));
             }
         }

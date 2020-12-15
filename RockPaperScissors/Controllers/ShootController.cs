@@ -11,27 +11,24 @@ namespace RockPaperScissors.Controllers
     [ApiController]
     public class ShootController : ControllerBase
     {
-        const int httpOk = 200;
-        const int httpBadRequest = 400;
-        const int httpInternalError = 500;
-
         // GET api/shoot
         [HttpGet]
-        public ActionResult<Object> Get(string name, string play)
+        public ActionResult<Object> Get(string play, string player_name)
         {
             try
             {
-                string gameResult = Player.GameResult(play, name);
-                string report = $"Player {name} {gameResult} the round";
-                return StatusCode(httpOk, report);
+                string gameResult = Player.PlayGame(play, player_name);
+                string report = $"Player {player_name} {gameResult} the round";
+                return StatusCode(HttpCodes.Ok, report);
             }
             catch (ArgumentException ex)
             {
-                return StatusCode(httpBadRequest, new ErrorMessage(ex.Message));
+                return StatusCode(HttpCodes.BadRequest,
+                                  new ErrorMessage(ex.Message));
             }
             catch (Exception)
             {
-                return StatusCode(httpInternalError,
+                return StatusCode(HttpCodes.InternalError,
                                   new ErrorMessage("Internal error occured. Please contact evgeniya.chernaya@gmail.com"));
             }
         }
