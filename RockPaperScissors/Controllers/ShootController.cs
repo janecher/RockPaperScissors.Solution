@@ -17,7 +17,8 @@ namespace RockPaperScissors.Controllers
         {
             try
             {
-                string gameResult = Player.PlayGame(play, player_name);
+                Player player = new Player(new RandomGenerator());
+                string gameResult = player.PlayGame(play, player_name);
                 string report = $"Player {player_name} {gameResult} the round";
                 return StatusCode(HttpCodes.Ok, report);
             }
