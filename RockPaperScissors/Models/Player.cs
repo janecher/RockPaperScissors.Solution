@@ -6,17 +6,23 @@ namespace RockPaperScissors.Models
 {
   public class Player
   {
+    private const string rock = "rock";
+    private const string paper = "paper";
+    private const string scissors = "scissors";
+    private const string ties = "ties";
+    private const string wins = "wins";
+    private const string loses = "loses";
+    private string[] plays = new string[3]{rock, paper, scissors};
     private static Dictionary<string, int> _playersList = new Dictionary<string, int>();
-    private static string[] plays = new string[3]{"rock", "paper", "scissors"};
 
-    private static string RandomPlay()
+    public RandomGenerator RandomPlay {get; set;}
+
+    public Player(RandomGenerator rand)
     {
-      Random rand = new Random();
-      int randomPlay = rand.Next(3); 
-      return plays[randomPlay];
+      RandomPlay = rand;
     }
 
-    public static string PlayGame(string play, string player_name)
+    public string PlayGame(string play, string player_name)
     {
       if(String.IsNullOrEmpty(play) || String.IsNullOrEmpty(player_name))
       {
@@ -26,14 +32,14 @@ namespace RockPaperScissors.Models
       {
         throw new ArgumentException("play parameter is invalid");
       }
-      string randomPlay = RandomPlay();
+      string randomPlay = plays[RandomPlay.GetNumber(plays.Length)];
       if(play == randomPlay)
       {
-        return "ties";
+        return ties;
       }
-      if(play == "rock" && randomPlay == "scissors" ||
-         play == "scissors" && randomPlay == "paper" ||
-         play == "paper" && randomPlay == "rock")
+      if(play == rock && randomPlay == scissors ||
+         play == scissors && randomPlay == paper ||
+         play == paper && randomPlay == rock)
       {
         if(_playersList.ContainsKey(player_name))
         {
@@ -43,9 +49,9 @@ namespace RockPaperScissors.Models
         {
           _playersList.Add(player_name, 1);
         }
-        return "wins";
+        return wins;
       }
-      return "loses";
+      return loses;
     }
 
     public static List<PlayerInfo> GetPlayersList()
