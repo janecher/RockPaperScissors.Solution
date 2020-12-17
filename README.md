@@ -6,23 +6,24 @@
 
 ## Description
 
-This Web API application makes a request to play a Rock-Paper-Scissors game and a request to show the leader boards.
+This Web API application makes a request to play a Rock-Paper-Scissors game and a request to show the leader board.
 
 ## Setup/Installation Requirements
 
-* Click the green "Clone or download" button at the right of the screen.
+* Install .Net Core 2.2 SDK //
 
-* Select "Download ZIP."
+In your browser, navigate to https://dotnet.microsoft.com/download/dotnet-core/thank-you/sdk-2.2.106-macos-x64-installer for Mac or https://dotnet.microsoft.com/download/dotnet-core/thank-you/sdk-2.2.203-windows-x64-installer for Windows and click the link "click here to download manually" if the download for .NET Core 2.2 SDK does not start automatically. //
 
-* Use a file extractor or unzip program (such as PeaZip, Unzipper, WinZip, Zipware, or 7-ZIP) to extract the ZIP files onto your computer.
+Double-click the downloaded .NET Core 2.2 SDK file and run the installer. //
 
-* In your browser, navigate to https://dotnet.microsoft.com/download/dotnet-core/thank-you/sdk-2.2.106-macos-x64-installer for Mac or https://dotnet.microsoft.com/download/dotnet-core/thank-you/sdk-2.2.203-windows-x64-installer for Windows and click the link "click here to download manually" if the download for .NET Core 2.2 SDK does not start automatically.
+* In the terminal navigate to the directory where you want to clone the repo and enter the command: 
+git clone https://github.com/janecher/RockPaperScissors.Solution.git
 
-* Double-click the downloaded .NET Core 2.2 SDK file and run the installer.
+* In the terminal navigate to the directory RockPaperScissors.Solution
 
-* Open your computer's terminal and navigate to the directory bearing the name of the program and containing the top level subdirectories and files.
+* To run the application, navigate to RockPaperScissors directory, and enter the command "dotnet restore", and then "dotnet run" in the terminal.
 
-* Enter the command "dotnet restore", and then "dotnet run" in the terminal.
+* To test the application, navigate to RockPaperScissors.Tests directory, and enter the command "dotnet restore", and then "dotnet test" in the terminal.
 
 ## API documentation
 
