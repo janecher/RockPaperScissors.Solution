@@ -11,13 +11,18 @@ namespace RockPaperScissors.Controllers
     [ApiController]
     public class ShootController : ControllerBase
     {
+        RandomGenerator _randomGenerator;
+        public ShootController(RandomGenerator randomGenerator)
+        {
+            _randomGenerator = randomGenerator;
+        } 
         // GET api/shoot
         [HttpGet]
-        public ActionResult<Object> Get(string play, string player_name)
+        public ActionResult<string> Get(string play, string player_name)
         {
             try
             {
-                Player player = new Player(new RandomGenerator());
+                Player player = new Player(_randomGenerator);
                 string gameResult = player.PlayGame(play, player_name);
                 string report = $"Player {player_name} {gameResult} the round";
                 return StatusCode(HttpCodes.Ok, report);
