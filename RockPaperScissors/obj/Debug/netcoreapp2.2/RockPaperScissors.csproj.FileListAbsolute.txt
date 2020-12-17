@@ -14,3 +14,4 @@
 /Users/evgeniya/Desktop/RockPaperScissors.Solution/RockPaperScissors/obj/Debug/netcoreapp2.2/RockPaperScissors.RazorTargetAssemblyInfo.cache
 /Users/evgeniya/Desktop/RockPaperScissors.Solution/RockPaperScissors/obj/Debug/netcoreapp2.2/RockPaperScissors.dll
 /Users/evgeniya/Desktop/RockPaperScissors.Solution/RockPaperScissors/obj/Debug/netcoreapp2.2/RockPaperScissors.pdb
+/Users/evgeniya/Desktop/RockPaperScissors.Solution/RockPaperScissors/bin/Debug/netcoreapp2.2/Leaderboard.json

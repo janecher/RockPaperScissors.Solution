@@ -17,3 +17,4 @@
 /Users/evgeniya/Desktop/RockPaperScissors.Solution/RockPaperScissors.Tests/obj/Debug/netcoreapp2.2/RockPaperScissors.Tests.csproj.CopyComplete
 /Users/evgeniya/Desktop/RockPaperScissors.Solution/RockPaperScissors.Tests/obj/Debug/netcoreapp2.2/RockPaperScissors.Tests.dll
 /Users/evgeniya/Desktop/RockPaperScissors.Solution/RockPaperScissors.Tests/obj/Debug/netcoreapp2.2/RockPaperScissors.Tests.pdb
+/Users/evgeniya/Desktop/RockPaperScissors.Solution/RockPaperScissors.Tests/bin/Debug/netcoreapp2.2/Leaderboard.json

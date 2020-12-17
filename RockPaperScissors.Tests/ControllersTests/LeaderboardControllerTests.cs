@@ -17,6 +17,8 @@ namespace RockPaperScissors.Tests
     [TestMethod]
     public void GetLeaderboard_Ties_Ok()
     {
+      Player.ClearPlayersList();
+  
       // Arrange
       Mock<RandomGenerator> randomTest = new Mock<RandomGenerator>(MockBehavior.Strict);
       randomTest.Setup(h => h.GetNumber(It.Is<int>(t => t == 3)))

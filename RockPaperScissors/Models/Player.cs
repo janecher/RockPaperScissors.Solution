@@ -21,13 +21,13 @@ namespace RockPaperScissors.Models
 
     static Player()
     {
-      _playersList = PlayersList();
+      _playersList = ReadPlayersListFromFile();
     }
 
     public Player(RandomGenerator rand)
     {
       _randomPlay = rand;
-      _playersList = PlayersList();
+      _playersList = ReadPlayersListFromFile();
     }
 
     public string PlayGame(string play, string player_name)
@@ -77,7 +77,12 @@ namespace RockPaperScissors.Models
       return _playersList.OrderByDescending(key => key.Value).Select(playerInfo => new PlayerInfo { PlayerName = playerInfo.Key, Score = playerInfo.Value}).ToList();
     }
 
-    private static Dictionary<string, int> PlayersList()
+    public static void ClearPlayersList()
+    {
+      DeletePlayersListFile();
+    }
+
+    private static Dictionary<string, int> ReadPlayersListFromFile()
     {
       try
       {
@@ -91,6 +96,11 @@ namespace RockPaperScissors.Models
       {
         return new Dictionary<string, int>();
       }
+    }
+
+    private static void DeletePlayersListFile()
+    {
+      File.Delete(leaderboardFileName);
     }
   }
 }
