@@ -51,6 +51,12 @@
               "target": "Package",
               "version": "[1.2.0, )"
             },
+            "Microsoft.AspNetCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            },
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
               "version": "[15.0.0, )"
@@ -64,6 +70,14 @@
             "Moq": {
               "target": "Package",
               "version": "[4.14.7, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.2, )"
+            },
+            "System.Web.Http": {
+              "target": "Package",
+              "version": "[4.0.0, )"
             }
           },
           "imports": [

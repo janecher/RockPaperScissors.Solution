@@ -12,7 +12,7 @@ using System.Web.Http;
 namespace RockPaperScissors.Tests
 {
   [TestClass]
-  public class ControllersTests : ControllerBase
+  public class ShootControllerTests : ControllerBase
   {
     [TestMethod]
     public void GetShoot_Ties_Ok()

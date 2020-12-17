@@ -11,17 +11,8 @@ namespace RockPaperScissors.Tests
   [TestClass]
   public class PlayerTests
   {
-    // class RandomGeneratorTest : RandomGenerator
-    // {
-    //   public override int GetNumber(int maxValue)
-    //   {
-    //     return 2;
-    //   }
-    // }
-
     [TestMethod]
-    [ExpectedException(typeof(ArgumentException),
-    "player_name and play parameters are required")]
+    [ExpectedException(typeof(ArgumentException), "player_name and play parameters are required")]
     public void PlayGame_EmptyParameters_ArgumentException()
     {
       Player player = new Player(new RandomGenerator());
@@ -29,8 +20,7 @@ namespace RockPaperScissors.Tests
     }
 
     [TestMethod]
-    [ExpectedException(typeof(ArgumentException),
-    "play parameter is invalid")]
+    [ExpectedException(typeof(ArgumentException), "play parameter is invalid")]
     public void PlayGame_InvalidPlay_ArgumentException()
     {
       Player player = new Player(new RandomGenerator());
@@ -62,7 +52,7 @@ namespace RockPaperScissors.Tests
     }
 
     [TestMethod]
-    public void PlayGame_PaperScissors_Ties()
+    public void PlayGame_PaperScissors_Loses()
     {
       Mock<RandomGenerator> randomTest = new Mock<RandomGenerator>(MockBehavior.Strict);
       randomTest.Setup(h => h.GetNumber(It.Is<int>(t => t == 3)))

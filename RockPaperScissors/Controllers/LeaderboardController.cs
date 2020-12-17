@@ -22,11 +22,6 @@ namespace RockPaperScissors.Controllers
                 return StatusCode(HttpCodes.Ok,
                                   JsonConvert.SerializeObject(Player.GetPlayersList(), Formatting.Indented));
             }
-            catch (ArgumentException ex)
-            {
-                return StatusCode(HttpCodes.BadRequest,
-                                  new ErrorMessage(ex.Message));
-            }
             catch (Exception)
             {
                 return StatusCode(HttpCodes.InternalError,
