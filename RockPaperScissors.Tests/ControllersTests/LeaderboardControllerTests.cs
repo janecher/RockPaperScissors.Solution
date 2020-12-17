@@ -8,8 +8,6 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
 
 namespace RockPaperScissors.Tests
 {
@@ -35,13 +33,19 @@ namespace RockPaperScissors.Tests
       var actionResult = leadController.Get();
       var objectResult = actionResult.Result as ObjectResult;
 
-      var listResult = new List<PlayerInfo>(){new PlayerInfo{PlayerName = "Evgeniya", Score = 2}, new PlayerInfo{PlayerName = "Jane", Score = 1}};
+      var list = new List<PlayerInfo>(){new PlayerInfo{PlayerName = "Evgeniya", Score = 2}, new PlayerInfo{PlayerName = "Jane", Score = 1}};
+
+      var listResult = objectResult.Value as List<PlayerInfo>;
 
       //Assert
       Assert.IsNotNull(objectResult);
       Assert.AreEqual(200, objectResult.StatusCode);
-      Assert.AreEqual(JsonConvert.SerializeObject(listResult, Formatting.Indented), objectResult.Value);
-
+      Assert.AreEqual(2, listResult.Count);
+      Assert.AreEqual("Evgeniya", listResult[0].PlayerName);
+      Assert.AreEqual(2, listResult[0].Score);
+      Assert.AreEqual("Jane", listResult[1].PlayerName);
+      Assert.AreEqual(1, listResult[1].Score);
+      
       randomTest.VerifyAll();
     }
   }

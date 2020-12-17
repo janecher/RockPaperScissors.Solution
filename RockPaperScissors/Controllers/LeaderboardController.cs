@@ -4,8 +4,6 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using RockPaperScissors.Models;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq; 
 
 namespace RockPaperScissors.Controllers
 {
@@ -15,12 +13,12 @@ namespace RockPaperScissors.Controllers
     {
         // GET api/leaderboard
         [HttpGet]
-        public ActionResult<Object> Get()
+        public ActionResult<List<PlayerInfo>> Get()
         {
             try
             {
                 return StatusCode(HttpCodes.Ok,
-                                  JsonConvert.SerializeObject(Player.GetPlayersList(), Formatting.Indented));
+                                  Player.GetPlayersList());
             }
             catch (Exception)
             {

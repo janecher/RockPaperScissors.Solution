@@ -10,7 +10,6 @@
     <PackageReference Include="MSTest.TestFramework" Version="1.2" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="System.Web.Http" Version="4.0.0"/>
-    <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
   </ItemGroup>
 
   <ItemGroup>

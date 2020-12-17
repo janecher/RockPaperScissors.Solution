@@ -32,14 +32,16 @@ namespace RockPaperScissors.Models
       {
         throw new ArgumentException("play parameter is invalid");
       }
+
       string randomPlay = plays[RandomPlay.GetNumber(plays.Length)];
+
       if(play == randomPlay)
       {
         return ties;
       }
-      if(play == rock && randomPlay == scissors ||
-         play == scissors && randomPlay == paper ||
-         play == paper && randomPlay == rock)
+      else if(play == rock && randomPlay == scissors ||
+              play == scissors && randomPlay == paper ||
+              play == paper && randomPlay == rock)
       {
         if(_playersList.ContainsKey(player_name))
         {
@@ -51,7 +53,10 @@ namespace RockPaperScissors.Models
         }
         return wins;
       }
-      return loses;
+      else
+      {
+        return loses;
+      }
     }
 
     public static List<PlayerInfo> GetPlayersList()
